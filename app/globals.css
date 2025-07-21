@@ -1,0 +1,126 @@
+
+@import "tailwindcss";
+
+
+
+:root {
+  --primary: #0d2b8b;
+  --secondary: #f48221;
+  --rv-ternary:#193282;
+  --rv-fourth:#c2a604;
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-sans:  sans-serif; /* Updated font */
+  --rv-primary: #0d2b8b;
+--rv-bg-primary: #0d2b8b;
+--rv-secondary: #f48221;
+--rv-bg-secondary: #f48221;
+--rv-black: #000000;
+--rv-bg-black: #000000;
+--rv-white: #ffffff;
+--rv-bg-white: #ffffff;
+--rv-bg-light: #dddddd;
+--rv-bg-dark: #dddddd;
+--rv-bg-gradient: linear-gradient(45deg, black, transparent);
+--rv-font-body: 'Montserrat', sans-serif;
+}
+
+
+body {
+  background: var(--rv-ternary);
+  color: var(--foreground);
+  font-family: var(--rv-font-body);
+}
+
+
+.font-montserrat {
+  font-family: var(--rv-font-body);
+}
+
+.font-urbanist {
+  font-family: var(--rv-font-urbanist);
+}
+
+
+a,button{
+  cursor: pointer;
+}
+
+.padding-top-section{
+  padding-top: 60px;
+}
+
+.padding-bottom-section{
+  padding-bottom: 60px;
+}
+
+.main_section{
+  padding: 60px 0 ;
+}
+
+@media (max-width: 767px) {
+ .main_section{
+  padding: 30px 10px 30px;
+}
+}
+
+.main_section1{
+  padding: 60px 0 0 0;
+}
+
+@media (max-width: 767px) {
+ .main_section1{
+  padding: 30px 10px 30px 10px;
+}
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-color: var(--rv-ternary);
+  }
+}
+
+p{
+  font-size: 16px;
+}
+
+.customRange {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    var(--rv-secondary) 0%,
+    var(--rv-secondary) var(--progress, 0%),
+    #e5e7eb var(--progress, 0%),
+    #e5e7eb 100%
+  );
+  border-radius: 9999px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.customRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--rv-secondary);
+  border-radius: 50%;
+  cursor: pointer;
+  /* margin-top: -7px; center thumb */
+  border: 2px solid white;
+}
+
+
+
+.customRange::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--rv-secondary);
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
