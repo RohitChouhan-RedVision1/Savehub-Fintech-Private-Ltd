@@ -19,16 +19,16 @@ const urbanist = Urbanist({
 
 export const metadata = {
   title: {
-    default: "InvestIQ Capital",
-    template: "%s -InvestIQ Capital",
+    default: "Savehub Fintech Private Ltd",
+    template: "%s -Savehub Fintech Private Ltd",
   },
   description:
-    "InvestIQ Capital: Your trusted partner for expert financial guidance, strategic investments, and wealth management solutions. Empowering you to secure a prosperous future.",
+    "Savehub Fintech Private Ltd: Your trusted partner for expert financial guidance, strategic investments, and wealth management solutions. Empowering you to secure a prosperous future.",
   twitter: {
     card: "summary_large_image",
-    site: "@InvestIQCapital",
+    site: "@SavehubFintechPrivateLtd",
   },
-  author: "InvestIQ Capital Team",
+  author: "Savehub Fintech Private Ltd Team",
 };
 
 export default function RootLayout({ children }) {

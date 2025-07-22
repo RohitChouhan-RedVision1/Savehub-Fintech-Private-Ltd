@@ -83,7 +83,7 @@ const WhyChooseUs = () => {
               />
             </div>
             <p className="text-[var(--rv-white)]/80">
-              At InvestIQ Capital, we are more than just a wealth management firm—we are your partners in building a secure, purpose-driven financial future. Our client-first approach, backed by intelligence and quality, ensures that every financial roadmap we craft reflects your goals, values, and life ambitions.
+              At Savehub Fintech Private Ltd, we are more than just a wealth management firm—we are your partners in building a secure, purpose-driven financial future. Our client-first approach, backed by intelligence and quality, ensures that every financial roadmap we craft reflects your goals, values, and life ambitions.
 
             </p>
           </motion.div>

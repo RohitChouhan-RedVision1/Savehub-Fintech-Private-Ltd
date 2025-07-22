@@ -74,7 +74,7 @@ const BusinessModel  = () => {
             //   transition={{ delay: 0.5, duration: 0.5 }}
             //   viewport={{ once: true }}
             >
-         At InvestIQ Capital, we blend traditional wisdom with modern technology to provide smart, seamless, and adaptable financial solutions.
+         At Savehub Fintech Private Ltd, we blend traditional wisdom with modern technology to provide smart, seamless, and adaptable financial solutions.
 
             </p>
 
