@@ -145,7 +145,7 @@ const handleSearchChange = (e) => {
         <div className="flex flex-wrap items-center justify-between mx-auto ">
           <Link href="/" className="">
             <div className="">
-              <Image
+              <img
                 src="/logo.png"
                 alt="logo"
                 width={200}
