@@ -69,7 +69,7 @@ export function Footer({sitedata,socialMedia,arn,servicedata}) {
             <div>
             <div className="">
             <Link href="/">
-              <Image
+              <img
                 src="/logo.png"
                 alt="Logo"
                 width={250} 

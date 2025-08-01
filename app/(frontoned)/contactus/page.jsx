@@ -39,9 +39,12 @@ export default async function ContactUs() {
                 <MapPin size={24} className="mt-4" />
                 <h3 className="text-lg font-medium mt-2">Reach Us</h3>
               </div>
-              <p className="text-sm break-words whitespace-pre-line">
-                <Link href={sitedata.mapurl}>{sitedata.address}</Link>
-              </p>
+            <p className="text-sm break-words whitespace-pre-line">
+  <Link href={sitedata.mapurl}>
+    {sitedata.address?.replace('Shop No. 122 ', 'Shop No. 122\n')}
+  </Link>
+</p>
+
             </div>
           </div>
 
