@@ -13,26 +13,10 @@ const WhoWeare = ({aboutus,missionVission}) => {
         <div className="max-w-screen-xl mx-auto main_section">
           {/* Transforming Ambitions Section */}
           <section
-            className="grid grid-cols-1 md:grid-cols-5 gap-2 mb-6 items-center"
+            className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6 items-center"
           >
-             <div className="relative md:col-span-2">
-              <Image
-                src="/images/whowe.webp"
-                alt="About Us"
-                width={400}
-                height={550}
-                className=" rounded-xl  shadow-lg"
-              />
-            </div>
-            
-            <motion.div
-            className="md:col-span-3 text-[var(--rv-white)]  rounded-xl"
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2
+             <div className="relative md:col-span-2 text-white">
+              <motion.h2
               className=" md:col-span-1 text-4xl font-bold mb-2"
               initial={{ x: 20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -52,8 +36,25 @@ We are a team of seasoned financial experts who prioritize <strong>integrity</st
 
 
             </motion.p>
+              <Image
+                src="/images/whowe.webp"
+                alt="About Us"
+                width={400}
+                height={550}
+                className=" rounded-xl  shadow-lg"
+              />
+            </div>
+            
+            <motion.div
+            className="md:col-span-3 text-[var(--rv-white)]  rounded-xl"
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            
          
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+           <div className="flex flex-col gap-8 mb-16">
   {/* Mission */}
   <div className="group bg-[var(--rv-primary)] p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
     {/* Icon */}

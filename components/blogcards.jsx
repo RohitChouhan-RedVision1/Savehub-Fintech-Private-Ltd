@@ -4,7 +4,7 @@ import React from 'react'
 const BlogCards = ({ item }) => {
     return (
         <div className="p-1">
-            <Link href={`blogs/${item.slug}`}>
+            <Link href={`/blogs/${item.slug}`}>
                 <div className="max-h-96 min-h-96 bg-[var(--rv-primary)] border border-gray-200 rounded-lg shadow ">
                     <img className="rounded-t-lg w-full h-52" src={item?.image?.url} alt={item?.image?.url} />
                     <div className="p-5">

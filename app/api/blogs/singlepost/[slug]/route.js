@@ -4,7 +4,7 @@ import { ConnectDB } from '@/lib/db/ConnectDB';
 
 // GET Blog by ID
 export async function GET(req, { params }) {
-    const { slug } = params; // Extract ID from params
+    const { slug } = await params; // Extract ID from params
 
     try {
         await ConnectDB(); // Ensure DB connection

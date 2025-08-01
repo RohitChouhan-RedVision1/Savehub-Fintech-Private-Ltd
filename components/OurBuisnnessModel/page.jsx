@@ -1,61 +1,46 @@
 import React from 'react'
-import styles from "./ServicePage.module.css";
-import { FaExchangeAlt, FaLaptopCode, FaChalkboardTeacher, FaRegEnvelope } from "react-icons/fa";
-import { HiOutlineLocationMarker, HiRefresh } from "react-icons/hi";
 
-import { MdQueryStats } from "react-icons/md";
+import {  FaLaptopCode, FaChalkboardTeacher, FaRegEnvelope } from "react-icons/fa";
+import { HiRefresh } from "react-icons/hi";
+
 import { FaHandshake, FaUsers } from 'react-icons/fa6';
 import TypesServices from './typesServices';
 ;
 
 const BusinessModel  = () => {
     const fundTypes = [
-     {
-    icon: <FaExchangeAlt className="text-3xl text-primary" />,
-    title: "Hybrid Operations",
-    description: "Available both digitally and in-person",
-  },
   {
-    icon: <HiOutlineLocationMarker className="text-3xl text-primary" />,
-    title: "Goal-Based Planning",
-    description: "Structured around your financial milestones",
+    icon: <FaRegEnvelope className="text-3xl text-primary" />,
+    title: "Bilingual Accessibility",
+    description: "By providing services in both English and Hindi, the SaveHub-Robo app removes language barriers that could hinder financial empowerment.",
   },
   {
     icon: <FaUsers className="text-3xl text-primary" />,
-    title: "Expert Portfolio Supervision",
-    description: "Professional oversight of all investments",
-  },
-  {
-    icon: <MdQueryStats className="text-3xl text-primary" />,
-    title: "Ongoing Monitoring",
-    description: "Regular rebalancing based on market conditions",
-  },
-  {
-    icon: <FaRegEnvelope className="text-3xl text-primary" />,
-    title: "Timely Communication",
-    description: "Performance updates and strategic insights",
+    title: "Household and Socio-Economic Focus",
+    description: "Customized tools designed for families and underserved communities promote inclusive wealth creation aligned with India’s socio-economic objectives.",
   },
   {
     icon: <FaLaptopCode className="text-3xl text-primary" />,
-    title: "Tech-Enabled Access",
-    description: "Streamlined onboarding, tracking, and reporting",
+    title: "AI-Powered Innovation",
+    description: "Utilizing advanced AI and machine learning technologies, the platform delivers personalized, cost-effective, and transparent investment advisory services.",
   },
   {
     icon: <FaHandshake className="text-3xl text-primary" />,
-    title: "Client-Centric Service",
-    description: "Transparent, personalized, and ethical",
+    title: "B2B Ecosystem",
+    description: "Strategic partnerships with financial institutions and advisors extend our reach, creating a scalable network for investment distribution.",
   },
   {
     icon: <FaChalkboardTeacher className="text-3xl text-primary" />,
-    title: "Financial Education",
-    description: "Empowering you with knowledge and insights",
+    title: "Commitment to Financial Literacy",
+    description: "Our emphasis on investor education empowers users to confidently navigate the complexities of investing.",
   },
   {
     icon: <HiRefresh className="text-3xl text-primary" />,
-    title: "Agile Strategy",
-    description: "Constantly evolving with market and personal changes",
+    title: "Trusted and Secure",
+    description: "Robust cybersecurity protocols and transparent operations foster trust among retail and institutional clients alike.",
   },
 ];
+
   return (
     <div>
        <div className="bg-[var(--rv-ternary)]">
@@ -64,19 +49,19 @@ const BusinessModel  = () => {
           // animate={isInView ? { x: 0, opacity: 1 } : {}}
           // transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            Our <span className="text-[var(--rv-secondary)]">Business Model</span>
+            Why <span className="text-[var(--rv-secondary)]">SaveHub Fintech </span> Stands Out
           </h2>
 
-          <p
+          {/* <p
               className="text-[var(--rv-white)]/80 text-center  leading-relaxed mb-6"
             //   initial={{ x: 20, opacity: 0 }}
             //   whileInView={{ x: 0, opacity: 1 }}
             //   transition={{ delay: 0.5, duration: 0.5 }}
             //   viewport={{ once: true }}
             >
-         At Savehub Fintech Private Ltd, we blend traditional wisdom with modern technology to provide smart, seamless, and adaptable financial solutions.
+         At SaveHub  Pvt. Ltd, we blend traditional wisdom with modern technology to provide smart, seamless, and adaptable financial solutions.
 
-            </p>
+            </p> */}
 
             <TypesServices serviceTypes={fundTypes} />
       </div>

@@ -1,6 +1,7 @@
 import { Montserrat, Urbanist } from "next/font/google";
 import "./globals.css";
 
+
 // Load Montserrat
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -19,21 +20,22 @@ const urbanist = Urbanist({
 
 export const metadata = {
   title: {
-    default: "Savehub Fintech Private Ltd",
-    template: "%s -Savehub Fintech Private Ltd",
+    default: "SaveHub  Pvt. Ltd",
+    template: "%s -SaveHub  Pvt. Ltd",
   },
   description:
-    "Savehub Fintech Private Ltd: Your trusted partner for expert financial guidance, strategic investments, and wealth management solutions. Empowering you to secure a prosperous future.",
+    "SaveHub  Pvt. Ltd: Your trusted partner for expert financial guidance, strategic investments, and wealth management solutions. Empowering you to secure a prosperous future.",
   twitter: {
     card: "summary_large_image",
     site: "@SavehubFintechPrivateLtd",
   },
-  author: "Savehub Fintech Private Ltd Team",
+  author: "SaveHub  Pvt. Ltd Team",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${montserrat.variable}`}>
+       
       <body className="font-montserrat">
         {children}
       </body>

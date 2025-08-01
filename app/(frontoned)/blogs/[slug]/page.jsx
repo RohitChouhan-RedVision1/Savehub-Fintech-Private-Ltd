@@ -7,20 +7,39 @@ import Loading from "../loading";
 
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
-    const res = await axios.get(`${process.env.NEXTAUTH_URL}/api/blogs/singlepost/${slug}`);
-    if (res.status !== 200) {
-        throw new Error("Something went wrong");
-    }
-    return res?.data[0];
+  const res = await axios.get(`${process.env.NEXTAUTH_URL}/api/blogs/singlepost/${slug}`);
+  if (res.status !== 200) {
+    throw new Error("Something went wrong");
+  }
+  // Return plain data only
+  const blog = res.data[0];
+  return {
+    posttitle: blog.posttitle,
+    title: blog.title,
+    metatitle: blog.metatitle,
+    keywords: blog.keywords,
+    description: blog.description,
+    createdAt: blog.createdAt,
+    content: blog.content,
+    image: blog.image || null,
+  };
 };
 
-const getRecentBlog = async (slug) => {
-    const res = await axios.get(`${process.env.NEXTAUTH_URL}/api/blogs/dashboardblogs`);
-    if (res.status !== 200) {
-        throw new Error("Something went wrong");
-    }
-    return res?.data;
+const getRecentBlog = async () => {
+  const res = await axios.get(`${process.env.NEXTAUTH_URL}/api/blogs/dashboardblogs`);
+  if (res.status !== 200) {
+    throw new Error("Something went wrong");
+  }
+  // Map to plain objects
+  return res.data.map((blog) => ({
+    _id: blog._id,
+    posttitle: blog.posttitle,
+    slug: blog.slug,
+    image: blog.image || null,
+    createdAt: blog.createdAt,
+  }));
 };
+
 
 // SEO - dynamic
 export const generateMetadata = async ({ params }) => {

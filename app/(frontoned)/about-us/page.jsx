@@ -17,6 +17,7 @@ import { getAboutus, getAboutusteams, getmissionvission } from "@/lib/functions"
 import WhoWeare from "@/components/Aboutuspage/whoweare";
 import TeamSection from "@/components/Aboutuspage/teamsection/teamsection";
 import Whatwedo from "@/components/Aboutuspage/Whatwedo.jsx";
+import BusinessModel from "@/components/OurBuisnnessModel/page";
 
   
   export const metadata = {
@@ -33,6 +34,7 @@ import Whatwedo from "@/components/Aboutuspage/Whatwedo.jsx";
       <div>
         <InnerBanner pageName="About Us" />    
        <HeaderAboutus aboutus={aboutus} />
+       <BusinessModel />
        <WhoWeare aboutus={aboutus} missionVission={missionVission}/>
        <TeamSection teams={teams} />
        <Whatwedo />

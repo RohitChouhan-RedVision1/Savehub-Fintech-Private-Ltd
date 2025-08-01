@@ -7,11 +7,11 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { productData, servicedata } from "@/data/services";
 import CryptoJS from "crypto-js";
+import GoogleTranslate from "../GoogleTranslate";
 
 
-const Navbar = () => {
+const Navbar = ({servicedata}) => {
   const path = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
@@ -653,6 +653,9 @@ const handleSearchChange = (e) => {
                     Login
                   </p>
                 </Link>
+              </li>
+              <li>
+                <GoogleTranslate />
               </li>
             </ul>
           </div>

@@ -15,22 +15,21 @@ import { FAQ } from "@/components/faq/faq";
 
 import AdvisorCategory from "@/components/AdvisoryCategory/advisorycategory";
 import Features from "@/components/features/features";
-import { getAddisLogos, getBlogs, getFaqs, getSiteData, getTestimonials } from "@/lib/functions";
+import { getAddisLogos, getBlogs, getFaqs, getServiceData, getSiteData, getTestimonials } from "@/lib/functions";
 import MutalFundSection from "@/components/MutalfundSection/page";
 import BusinessModel from "@/components/OurBuisnnessModel/page";
+import SocialMediaSidebar from "@/components/socialMedia";
+import WhatsAppBot from "@/components/chatbot/whatsapp";
 
 
 
 
-// export async function getSiteData() {
-//     await ConnectDB();
-//     const data = await SiteSettingsModel?.findOne({}).select('-_id');
-//     return data ? data.toObject() : {};
-// }
+
+
 
 export default async function Page() {
   const sitedata = await getSiteData();
-  // const servicedata = await getServiceData();
+  const servicedata = await getServiceData();
   const testimonials=await getTestimonials();
   const blogs=await getBlogs();
   // console.log(blogs)
@@ -45,12 +44,13 @@ export default async function Page() {
           <Calculator/>
           <MutalFundSection/>
           <SubscribCard />
-          {/* <BusinessModel /> */}
-       <Testimonials testimonials={testimonials}/>
+      
+       {/* <Testimonials testimonials={testimonials}/> */}
           <Blog blogs={blogs} />
           <LatestNews />
           <FAQ Faqs={Faqs}/>
-          
+          <WhatsAppBot sitedata={sitedata} services={servicedata} />
+          {/* <SocialMediaSidebar sitedata={sitedata} /> */}
         </main>
     </div>
   );

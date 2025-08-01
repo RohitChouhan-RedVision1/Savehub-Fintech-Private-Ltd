@@ -107,7 +107,7 @@ const SubscribCard = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image
+                  <img
                     src={`https://redvisionweb.com/${logo.logo}`}
                     alt={logo.logoname}
                     width={160}

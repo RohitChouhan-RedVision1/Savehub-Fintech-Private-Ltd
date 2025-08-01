@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
           Why <span className="text-[var(--rv-secondary)]">Choose</span> Us?
         </motion.h2>
 
-        <div className="flex flex-col lg:flex-row items-start gap-4">
+        <div className="flex flex-col lg:flex-row  gap-4">
           {/* Left: Image + Paragraph (50%) */}
           <motion.div
             className="lg:w-[50%] w-full space-y-6"
@@ -82,20 +82,24 @@ const WhyChooseUs = () => {
                 className="object-cover"
               />
             </div>
-            <p className="text-[var(--rv-white)]/80">
-              At Savehub Fintech Private Ltd, we are more than just a wealth management firm—we are your partners in building a secure, purpose-driven financial future. Our client-first approach, backed by intelligence and quality, ensures that every financial roadmap we craft reflects your goals, values, and life ambitions.
+            {/* <p className="text-[var(--rv-white)]/80">
+              At SaveHub  Pvt. Ltd, we are more than just a wealth management firm—we are your partners in building a secure, purpose-driven financial future. Our client-first approach, backed by intelligence and quality, ensures that every financial roadmap we craft reflects your goals, values, and life ambitions.
 
-            </p>
+            </p> */}
           </motion.div>
 
           {/* Right: Counters (50%) */}
           <motion.div
-            className="lg:w-[50%] w-full space-y-12 pl-0 lg:pl-10"
+            className="lg:w-[50%] w-full space-y-12 pl-0 lg:pl-10 flex justify-center items-center text-center"
             initial={{ x: 100, opacity: 0 }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
           >
-            <div className="count" data-step="1">
+            <p className="text-[var(--rv-white)]/80">
+              At SaveHub  Pvt. Ltd, we are more than just a wealth management firm—we are your partners in building a secure, purpose-driven financial future. Our client-first approach, backed by intelligence and quality, ensures that every financial roadmap we craft reflects your goals, values, and life ambitions.
+
+            </p>
+            {/* <div className="count" data-step="1">
               <div
                 className="text-4xl font-bold text-[var(--rv-secondary)] counter-number"
                 data-target="10"
@@ -153,7 +157,7 @@ const WhyChooseUs = () => {
               <p className="text-lg border-t border-gray-700 pt-2">
                 People Managed
               </p>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </section>

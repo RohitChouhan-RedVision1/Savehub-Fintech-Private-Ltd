@@ -58,7 +58,7 @@ export default function Signin({siteData}) {
 
   return (
     <>
-      <div className="md:w-1/2 xl:w-5/12 p-6 sm:p-12 items-center">
+      <div className="md:w-1/2 xl:w-5/12  items-center">
         <div className="flex justify-center">
           <div className="flex justify-center flex-wrap gap-2">
             {roles.map((role) => (
@@ -94,7 +94,7 @@ export default function Signin({siteData}) {
 
                 <div className="relative mt-5">
                   <input
-                    className="w-full px-8 py-4  font-medium  border-b border-gray-300 placeholder-gray-500 text-sm focus:outline-none "
+                    className="w-full px-8 py-2  font-medium  border-b border-gray-300 placeholder-gray-500 text-sm focus:outline-none "
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
                     value={provider.password}
@@ -114,8 +114,16 @@ export default function Signin({siteData}) {
                   </div>
                 </div>
 
+<div className="mt-5 flex justify-end mb-2 text-[var(--rv-secondary)]">
+  <Link
+              href={`/forget-password?type=${selectedRole}`}
+              className="text-ms underline"
+            >
+              Forgot Password
+            </Link>
+</div>
                 <button
-                  className="mt-5 tracking-wide font-semibold bg-[var(--rv-primary)] text-gray-100 w-full py-4 rounded-lg hover:bg-[var(--rv-secondary)] transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                  className="tracking-wide font-semibold bg-[var(--rv-primary)] text-gray-100 w-full py-4 rounded-lg hover:bg-[var(--rv-secondary)] transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                   disabled={loading}
                 >
                   {loading ? (
@@ -161,18 +169,46 @@ export default function Signin({siteData}) {
             </div>
           </div>
 
-          <div className="flex gap-2 mt-4 text-[var(--rv-secondary)]">
-            <Link
-              href={`/forget-password?type=${selectedRole}`}
-              className="text-ms underline"
-            >
-              Forgot Password
-            </Link>
+          <div className="mt-4">
+            <p className="text-gray-200 text-center mb-2 ">For New User Download Our App </p>
+            <div className="flex  items-center justify-center gap-2 ">
+              
+          <Link  href={"https://play.google.com/store/apps"} target="_blank" rel="noopener noreferrer" className="cursor-pointer">
+          <button
+            className="text-white text-2xl font-semibold px-10 py-6 rounded-2xl cursor-pointer"
+            style={{
+              backgroundImage: `url(/Playstore.png)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              minWidth: "200px", // Ensures button width increases
+            }}
+          >
+            
+          </button>
+        </Link>
+        <Link  href={"https://apps.apple.com/us/app/"} target="_blank" rel="noopener noreferrer" className="cursor-pointer ">
+          <button
+            className="text-white text-2xl font-semibold px-10 py-6 rounded-2xl cursor-pointer"
+            style={{
+              backgroundImage: `url(/Appstore.png)`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              minWidth: "200px", // Ensures button width increases
+            }}
+          >
+            
+          </button>
+        </Link>
+         </div>
+          </div>
+
+          {/* <div className="flex gap-2 mt-4 text-[var(--rv-secondary)]">
+            
             <span className="text-[#07070799]">|</span>
             <Link href="/contactus" className="text-ms underline">
               SignUp
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

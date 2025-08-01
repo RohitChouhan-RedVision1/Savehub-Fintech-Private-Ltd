@@ -121,7 +121,7 @@ const FinancialHealth = () => {
               <FormItem>
                 <FormControl>
                   <Input
-                    placeholder="User Name"
+                    placeholder="Name"
                     {...field}
                     aria-label="User Name"
                     className="border border-gray-500"
@@ -181,7 +181,7 @@ const FinancialHealth = () => {
                   <textarea
                     placeholder="Message"
                     {...field}
-                    className="w-full border border-gray-500 p-1 rounded"
+                    className="w-full border border-gray-500 pt-2 pl-4 rounded"
                     aria-label="Message"
                   />
                 </FormControl>
@@ -284,7 +284,7 @@ const FinancialHealth = () => {
       to: sitedata?.email,
       subject: "New Enquiry",
       html: `New Enquiry from Risk profile\n
-User Name : ${userdata?.username}, \n
+Name : ${userdata?.username}, \n
 Email : ${userdata?.email} \n
 Mobile number : ${userdata?.mobile} \n
 Message : ${userdata?.message}\n

@@ -46,12 +46,12 @@ export function FAQ({Faqs}) {
   console.log(Faqs)
   const faqs = [
     {
-      question: "Why should I choose Savehub Fintech Private Ltd to manage my investments?",
+      question: "Why should I choose SaveHub  Pvt. Ltd to manage my investments?",
       answer:
-        "At Savehub Fintech Private Ltd, we don’t just recommend products—we build portfolios aligned with your life goals...",
+        "At SaveHub  Pvt. Ltd, we don’t just recommend products—we build portfolios aligned with your life goals...",
     },
     {
-      question: "Is my money safe if I invest through Savehub Fintech Private Ltd?",
+      question: "Is my money safe if I invest through SaveHub  Pvt. Ltd?",
       answer:
         "Absolutely. Your investments are held with SEBI-registered mutual funds...",
     },

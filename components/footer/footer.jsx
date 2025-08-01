@@ -5,7 +5,6 @@ import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedin, FaMapLocation, FaPinterest, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa6";
 import { FaEnvelope, FaMap, FaPhone } from "react-icons/fa";
 import { motion } from "framer-motion"; 
-import { servicedata } from "@/data/services";
 
 
 
@@ -25,7 +24,7 @@ const fadeLeft = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
 };
 
-export function Footer({sitedata,socialMedia,arn}) {
+export function Footer({sitedata,socialMedia,arn,servicedata}) {
 
     const amfisabilinks = [
     { title: "Privacy Policy", link: "/footer-page/privacy-policy" },
@@ -214,7 +213,7 @@ export function Footer({sitedata,socialMedia,arn}) {
                 </p>
                 
                 <p className="text-gray-200 mb-2">
-                  <b>{sitedata.websiteName}</b> is an AMFI
+                  <b>{sitedata.name}</b> is an AMFI
                   Registered Mutual Fund Distributor.
                 </p>
                 <p className="text-gray-200 mb-2">
@@ -226,9 +225,9 @@ export function Footer({sitedata,socialMedia,arn}) {
                   portfolio that suits your needs.
                 </p>
                 <p className="text-gray-200 mb-5">
-                  <b>{sitedata.websiteName}</b> makes no warranties or representations,
+                  <b>{sitedata.name}</b> makes no warranties or representations,
                   express or implied, on products offered through the platform
-                  of <b>{sitedata.websiteName}</b>. It accepts no liability for any
+                  of <b>{sitedata.name}</b>. It accepts no liability for any
                   damages or losses, however, caused, in connection with the use
                   of, or on the reliance of its product or related services.
                   Terms and conditions of the website are applicable.
@@ -267,7 +266,7 @@ export function Footer({sitedata,socialMedia,arn}) {
         <div className=" flex flex-col md:flex-row justify-between">
                <div >
               <p>
-                © Copyright 2025 - <strong className="text-gray-300/90 bold">{sitedata.websiteName}</strong>. All Right Reserved
+                © Copyright 2025 - <strong className="text-gray-300/90 bold">{sitedata.name}</strong>. All Right Reserved
               </p>
             </div>
             <div >
