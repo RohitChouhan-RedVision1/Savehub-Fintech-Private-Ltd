@@ -40,7 +40,7 @@ const Whatwedo = () => {
                          transition={{ delay: 0.5, duration: 0.5 }}
                          viewport={{ once: true }}
                        >
-          At SaveHub  Pvt. Ltd, we offer <strong>end-to-end financial solutions</strong> customized to your life goals. Whether you're planning for retirement, purchasing a new home, or securing your child's education, our services are tailored to get you there.
+          At SaveHub, we offer <strong>end-to-end financial solutions</strong> customized to your life goals. Whether you're planning for retirement, purchasing a new home, or securing your child's education, our services are tailored to get you there.
 
                        </motion.p>
 

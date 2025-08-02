@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
           >
             <p className="text-[var(--rv-white)]/80">
-              At SaveHub  Pvt. Ltd, we are more than just a wealth management firm—we are your partners in building a secure, purpose-driven financial future. Our client-first approach, backed by intelligence and quality, ensures that every financial roadmap we craft reflects your goals, values, and life ambitions.
+              At SaveHub, we are more than just a wealth management firm—we are your partners in building a secure, purpose-driven financial future. Our client-first approach, backed by intelligence and quality, ensures that every financial roadmap we craft reflects your goals, values, and life ambitions.
 
             </p>
             {/* <div className="count" data-step="1">

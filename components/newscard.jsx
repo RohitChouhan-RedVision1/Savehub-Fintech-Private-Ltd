@@ -15,8 +15,8 @@ const NewsCard = ({ item }) => {
                     </div>
 
                     <div className="p-4">
-                        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-[var(--rv-white)] line-clamp-2">{item.title.slice(0, 40)}...</h5>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 line-clamp-3">{item.description.slice(0, 80)}...</p>
+                        <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-100 dark:text-[var(--rv-white)] line-clamp-2">{item.title.slice(0, 40)}...</h5>
+                        <p className="mb-3 font-normal text-gray-300 dark:text-gray-400 line-clamp-3">{item.description.slice(0, 80)}...</p>
                     </div>
                 </div>
             </Link>

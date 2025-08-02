@@ -1,69 +1,39 @@
-import BlogCards from "@/components/blogcards";
+
+
 import formatDate from "@/lib/formatDate";
-import axios from "axios";
+
 import Image from "next/image";
+
+import BlogCards from "@/components/blogcards";
+import { getBlogBySlug, getBlogs } from "@/lib/functions";
 import { Suspense } from "react";
 import Loading from "../loading";
-
-// FETCH DATA WITH AN API
-const getData = async (slug) => {
-  const res = await axios.get(`${process.env.NEXTAUTH_URL}/api/blogs/singlepost/${slug}`);
-  if (res.status !== 200) {
-    throw new Error("Something went wrong");
-  }
-  // Return plain data only
-  const blog = res.data[0];
-  return {
-    posttitle: blog.posttitle,
-    title: blog.title,
-    metatitle: blog.metatitle,
-    keywords: blog.keywords,
-    description: blog.description,
-    createdAt: blog.createdAt,
-    content: blog.content,
-    image: blog.image || null,
-  };
-};
-
-const getRecentBlog = async () => {
-  const res = await axios.get(`${process.env.NEXTAUTH_URL}/api/blogs/dashboardblogs`);
-  if (res.status !== 200) {
-    throw new Error("Something went wrong");
-  }
-  // Map to plain objects
-  return res.data.map((blog) => ({
-    _id: blog._id,
-    posttitle: blog.posttitle,
-    slug: blog.slug,
-    image: blog.image || null,
-    createdAt: blog.createdAt,
-  }));
-};
-
-
-// SEO - dynamic
-export const generateMetadata = async ({ params }) => {
-    const { slug } = params;
-
-    const post = await getData(slug);
-    return {
-        title: post?.metatitle,
-        description: post?.description,
-        keywords: post?.keywords,
-    };
-};
-
+ 
 const SinglePostPage = async ({ params }) => {
-    const { slug } = params;
-    // // FETCH DATA WITH AN API
-    const post = await getData(slug);
-    const recentPost = await getRecentBlog();
 
-    function createMarkup() {
-        return { __html: post?.content }
-    }
-    return (
-        <div className="max-w-screen-xl mx-auto main_section">
+  const { slug } = await params;
+ 
+  let post, recentPost;
+ 
+  try {
+
+    post = await getBlogBySlug(slug);
+
+    recentPost = await getBlogs();
+
+  } catch (error) {
+
+    console.error("Failed to fetch data:", error);
+
+    return <div className="text-red-500">Failed to load blog post.</div>;
+
+  }
+ 
+  const createMarkup = () => ({ __html: post?.content });
+ 
+  return (
+<>
+<div className="max-w-screen-xl mx-auto main_section">
             <div className="py-20">
                 <div className="mb-16">
                     <h1 className="text-5xl font-bold text-gray-100 mb-5">{post?.posttitle}</h1>
@@ -88,7 +58,9 @@ const SinglePostPage = async ({ params }) => {
                     <h1 className="">{post?.title}</h1>
                     <div className="my-5">
                         {post && (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <Suspense
+                             fallback={<div>Loading...</div>}>
+
                                 <div dangerouslySetInnerHTML={createMarkup()} className="text-white" />
                             </Suspense>
                         )}
@@ -108,7 +80,11 @@ const SinglePostPage = async ({ params }) => {
                 </div>
             </div>
         </div >
-    );
-};
+</>
 
+  );
+
+};
+ 
 export default SinglePostPage;
+ 
