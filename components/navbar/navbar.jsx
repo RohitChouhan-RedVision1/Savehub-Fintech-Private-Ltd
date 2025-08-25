@@ -148,8 +148,8 @@ const handleSearchChange = (e) => {
               <img
                 src="/logo.png"
                 alt="logo"
-                width={200}
-                height={200}
+                width={250}
+                height={250}
                 className="rounded"
                 // layout="responsive"
               />

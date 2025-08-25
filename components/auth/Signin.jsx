@@ -37,7 +37,7 @@ export default function Signin({siteData}) {
     try {
       setLoading(true);
       console.log(provider)
-      const res = await axios.post("https://redvisionweb.com/api/login/arn-login", provider);
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_DATA_API}/api/login/arn-login`, provider);
       console.log(res)
       if (res.data.status === true) {
         // Clear credentials on success

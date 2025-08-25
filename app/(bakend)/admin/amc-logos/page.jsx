@@ -283,15 +283,15 @@ useEffect(() => {
                       </div>
                       <div className="my-4">
                         {item.logo && typeof item?.logo !== "string" ? (
-                          <Image
+                          <img
                             src={URL.createObjectURL(item.logo)} // Generate a temporary URL for File
                             width={150}
                             height={100}
                             alt="Uploaded Logo"
                           />
                         ) : (
-                          <Image
-                            src={`https://redvisionweb.com${item.logo}` || "/placeholder-image.jpg"} // Use string or fallback placeholder
+                          <img
+                            src={`${process.env.NEXT_PUBLIC_DATA_API}${item.logo}` || "/placeholder-image.jpg"} // Use string or fallback placeholder
                             width={150}
                             height={100}
                             alt="Logo"

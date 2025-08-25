@@ -31,7 +31,7 @@ export default function Signin() {
         event.preventDefault();
         try {
             if (otpField) {
-                const response = await axios.post('https://redvisionweb.com/api/login/submit-forget-password', otpData);
+                const response = await axios.post(`${process.env.NEXT_PUBLIC_DATA_API}/api/login/submit-forget-password`, otpData);
                 console.log(response)
                 console.log(response.data)
                 if (response.data.msgType === 'success') {
@@ -43,7 +43,7 @@ export default function Signin() {
                 }
             }
             else {
-                const response = await axios.post('https://redvisionweb.com/api/login/forget-password', provider);
+                const response = await axios.post(`${process.env.NEXT_PUBLIC_DATA_API}/api/login/forget-password`, provider);
                 if (response.data.msgType === 'success') {
                     setOtpField(true);
                     setError(`One Time Password (OTP) has been sent to your mobile ******${response.data.mobileLastFourDigit} And e-mail to ${response.data.email}, please enter the same here to login`);

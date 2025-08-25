@@ -23,7 +23,7 @@ export default function AdvisorCategory() {
     const fetchCategories = async () => {
       try {
         const response = await fetch(
-          "https://redvisionweb.com/api/advisor-scheme-category?apikey=351b03c24a79d2f40796037e0d8c2c49",
+          `${process.env.NEXT_PUBLIC_DATA_API}/api/advisor-scheme-category?apikey=351b03c24a79d2f40796037e0d8c2c49`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -52,7 +52,7 @@ export default function AdvisorCategory() {
 
     try {
       const response = await axios.post(
-        "https://redvisionweb.com/api/advisor-scheme-category-funds?apikey=351b03c24a79d2f40796037e0d8c2c49",
+        `${process.env.NEXT_PUBLIC_DATA_API}/api/advisor-scheme-category-funds?apikey=351b03c24a79d2f40796037e0d8c2c49`,
         { arnId, category: myId, schemeCategory }
       );
       // console.log(response);  

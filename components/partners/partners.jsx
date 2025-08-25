@@ -108,7 +108,7 @@ const SubscribCard = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src={`https://redvisionweb.com/${logo.logo}`}
+                    src={`${process.env.NEXT_PUBLIC_DATA_API}${logo.logo}`}
                     alt={logo.logoname}
                     width={160}
                     height={180}
