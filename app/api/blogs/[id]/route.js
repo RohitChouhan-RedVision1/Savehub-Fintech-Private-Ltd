@@ -5,7 +5,7 @@ import { deleteFileIfExists, saveImageToLocal, slugify } from "@/lib/functions";
 import axios from "axios";
 
 export async function DELETE(req, { params }) {
-  const { id } = params;
+  const { id } = await params;
 
   try {
     await ConnectDB();

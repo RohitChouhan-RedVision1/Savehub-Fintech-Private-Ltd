@@ -30,7 +30,7 @@ export default function HeroSection({sitedata}) {
          transition={{ delay: 2, duration: 0.8 }}
               viewport={{ once: true }}
             >
-              Get Strated
+             Get Started
             </motion.button></Link>
 
         {/* New Buttons */}

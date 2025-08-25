@@ -107,9 +107,9 @@ export default function Signin({siteData}) {
                     onClick={() => setShowPassword((prev) => !prev)}
                   >
                     {showPassword ? (
-                      <EyeOff className="w-5 h-5 text-black" />
+                      <EyeOff className="w-5 h-5 text-white" />
                     ) : (
-                      <Eye className="w-5 h-5 text-black" />
+                      <Eye className="w-5 h-5 text-white" />
                     )}
                   </div>
                 </div>

@@ -43,39 +43,6 @@ const childFade = {
 };
 
 export function FAQ({Faqs}) {
-  console.log(Faqs)
-  const faqs = [
-    {
-      question: "Why should I choose SaveHub to manage my investments?",
-      answer:
-        "At SaveHub, we don’t just recommend products—we build portfolios aligned with your life goals...",
-    },
-    {
-      question: "Is my money safe if I invest through SaveHub?",
-      answer:
-        "Absolutely. Your investments are held with SEBI-registered mutual funds...",
-    },
-    {
-      question: "Do I have to pay anything to get started?",
-      answer:
-        "No. We don’t charge you any upfront or advisory fees...",
-    },
-    {
-      question: "What kind of investors do you work with?",
-      answer:
-        "Whether you're just starting your investment journey or managing a multi-crore portfolio...",
-    },
-    {
-      question: "Will I get regular updates and personal support?",
-      answer:
-        "Yes! We provide timely portfolio reviews, performance insights...",
-    },
-    {
-      question: "I’ve already invested elsewhere. Can you still help?",
-      answer:
-        "Of course. We offer portfolio reviews and restructuring...",
-    },
-  ];
 
   const [openIndex, setOpenIndex] = useState(null);
 
